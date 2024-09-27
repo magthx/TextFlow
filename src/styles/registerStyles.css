@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(230, 230, 230);
+}
+
+.vibin-default-view {
+    color: rgb(83, 83, 83);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register_UserMainWindow,
+.login_UserMainWindow {
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100vh;
+}
+
+.insideThisRegister {
+    margin: 30px;
+    padding: 30px;
+    height: 500px;
+    border-radius: 12px;
+    background-color: #ffffffe0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    flex-direction: column;
+    border: transparent;
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    outline: none;
+    width: 95%;
+}
+
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=email]::placeholder {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+button[type=submit] {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: rgb(27, 27, 255);
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    outline: transparent;
+    border: transparent;
+    font-size: 15px;
+    opacity: 0.8;
+    padding: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+button[type=submit]:hover {
+    background: rgb(1, 1, 255);
+    transition: all 300ms ease-in-out;
+}
+
+.insideThisLogin {
+    margin: 30px;
+    padding: 30px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: #ffffffe0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.insideThisLogin h3,
+.insideThisRegister h3 {
+    color: rgb(37, 37, 136);
+    opacity: 0.9;
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#thisUsersRegisterLogo,
+#thisUsersLoginLogo {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 30px;
+    color: rgba(85, 85, 255, 0.993);
+    opacity: 0.9;
+}
+
+.thisULogin {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: all 300ms ease-in-out;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.containerReglas {
+    font-size: 14px;
+    font-family: 'Outfit', sans-serif;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.thisULogin:hover {
+    transition: all 300ms ease-in-out;
+    opacity: 1;
+}
+
+#submitButtonRegisterWindow i,
+#submitButtonLoginWindow i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle;
+    margin-top: 2px;
+    margin-left: 10px;
+
+}

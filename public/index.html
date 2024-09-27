@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextFlow - Sala General</title>
+    <link rel="stylesheet" href="mainStyles.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <div class="this-user-logo-account">
+            <i class="fas fa-user-circle" id="logo-account"></i>
+        </div>
+        <div class="show-user-info-live">
+            <div class="this-user-info" id="this-user-info">
+                <ul class="ul-user" id="ul-user" style="display: none;">
+                    <span>Usuario: <strong id="inyeccion_user"></strong></span>
+                    <span>Correo: <strong id="inyeccion_email"></strong></span>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav style="display: flex; position: absolute; top: 46px; left: 50%; transform: translate(-50%, -50%); ">
+        <h2 style="display: flex;font-family: 'Outfit', sans-serif;letter-spacing: 1px;">TextFlow</h2>
+    </nav>
+    <main>
+        <div class="user-interface-main-screen" id="user-interface-main-screen">
+            <div class="initial-logo-question">
+                <!-- PRIMEROS ICONOS -->
+                <div class="first-icons-interface">
+                    <strong><i id="injection_gray_circle_chat"></i></strong>
+
+                    <span id="injection-span-main-interface"></span>
+                </div>
+
+                <!-- SEGUNDOS ICONOS ?--->
+                <div class="second-icons-interface">
+                    <i class="fas fa-cog" onclick="funcionInformacion();"></i>
+                    <i class="fas fa-question-circle"></i>
+                </div>
+            </div>
+
+            <div class="user-main-app-window" id="user-main-app-window">
+
+            </div>
+            <!-- AQUI DEBERIA DE IR LOS MENSAJES QUE EL USUARIO ENVIA
+            <div class="my-user-father">
+                <div class="my-user-main-app-window">
+                    <ul>
+                        <li id="my-message-injection-all-users" class="my-message-injection-all-users">
+                            <strong style="font-weight: 600;"><span id="this--my-users-span"
+                                    style="font-weight: 500;"></span></strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </main>
+    <div class="this-father-form">
+        <form method="post" id="unique-user-form" class="unique-user-form">
+            <input type="text" required maxlength="350" placeholder="Escribe tu mensaje.." id="text--input-from-user"
+                autocomplete="off" autofocus>
+            <button type="submit" id="send--user--form"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <div class="information-show-bar" id="information-show-bar">
+        <div class="this-show-or-hide" id="this-show-or-hide">
+            <h1>Personaliza tu chat</h1>
+            <div class="container-images">
+                <ul>
+
+                    <a href="#imagen2">
+                        <li><img src="../src/assets/images/defaultWhite_Background.webp"
+                                onclick="defaultBackgroundImage();" alt=""></li>
+                    </a>
+
+                    <a href="#imagen3">
+                        <li><img src="../src/assets/images/Black_Wallpaper.jpg" alt="" onclick="blackWallpaper();"></li>
+                    </a>
+
+                    <a href="#imagen1">
+                        <li><img src="../src/assets/images/spiderman_into_the_spiderverse.webp" alt=""
+                                onclick="first_background_image();"></li>
+                    </a>
+
+                    <a href="#imagen4">
+                        <li><img src="../src/assets/images/1348853.png" alt="" onclick="fourth_background_image();">
+                        </li>
+                    </a>
+
+                </ul>
+
+                <div class="lightbox" id="imagen1">
+                    <a href="#" class="close" style="cursor: default;">Fondo agregado!</a>
+                    <img src="../src/assets/images/spiderman_into_the_spiderverse.webp" alt="">
+                </div>
+
+                <div class="lightbox" id="imagen2">
+                    <a href="#" class="close" style="cursor: default;">Fondo agregado!</a>
+                    <img src="../src/assets/images/defaultWhite_Background.webp" alt="">
+                </div>
+
+                <div class="lightbox" id="imagen3">
+                    <a href="#" class="close" style="cursor: default;">Fondo agregado!</a>
+                    <img src="../src/assets/images/Black_Wallpaper.jpg" alt="">
+                </div>
+
+                <div class="lightbox" id="imagen4">
+                    <a href="#" class="close" style="cursor: default;">Fondo agregado!</a>
+                    <img src="../src/assets/images/1348853.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="times" id="times" style="display: none;" onclick="cerrarConfiguracion();">
+        <a href="#" style='position: absolute;'>&times;</a>
+    </div>
+    <script>
+        const interfazUsuario = document.getElementById('user-interface-main-screen');
+        function first_background_image() {
+            const imagen1 = '../src/assets/images/spiderman_into_the_spiderverse.webp';
+            interfazUsuario.style.backgroundImage = `url(${imagen1})`;
+        }
+        function defaultBackgroundImage() {
+            const imagen2Default = '../src/assets/images/defaultWhite_Background.webp';
+            interfazUsuario.style.background = `url(${imagen2Default})`;
+        }
+        function blackWallpaper() {
+            const imagen3 = '../src/assets/images/Black_Wallpaper.jpg';
+            interfazUsuario.style.background = `url(${imagen3})`;
+        }
+        function fourth_background_image() {
+            const imagen4 = '../src/assets/images/1348853.png';
+            interfazUsuario.style.background = `url(${imagen4})`;
+        }
+        function funcionInformacion() {
+            const obtenerElementoMostrar = document.getElementById('this-show-or-hide');
+            const obtenerElementoTimes = document.getElementById('times');
+            if (obtenerElementoMostrar.style.display === 'none' || obtenerElementoMostrar.style.display === '') {
+                obtenerElementoMostrar.style.display = 'flex';
+                obtenerElementoTimes.style.display = 'flex';
+            } else {
+                obtenerElementoMostrar.style.display = 'none';
+                obtenerElementoTimes.style.display = 'none';
+            };
+        }
+
+        document.querySelectorAll('.lightbox').forEach(lightbox => {
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) {
+                    window.location.hash = '';
+                    const obtenerElementoMostrar = document.getElementById('this-show-or-hide');
+                    const obtenerElementoTimes = document.getElementById('times');
+                    obtenerElementoTimes.style.display = 'none';
+                    obtenerElementoMostrar.style.display = 'none';
+                }
+            });
+        });
+        function cerrarConfiguracion() {
+            const obtenerElementoMostrar = document.getElementById('this-show-or-hide');
+            const obtenerElementoTimes = document.getElementById('times');
+            obtenerElementoTimes.style.display = 'none';
+            obtenerElementoMostrar.style.display = 'none';
+        }
+    </script>
+</body>
+<script type="module" src="main_window_scripting.js"></script>
+
+</html>

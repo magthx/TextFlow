@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:850px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .register_UserMainWindow,
+    .login_UserMainWindow {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        margin-bottom: 10px;
+    }
+    .register_UserMainWindow{
+        height: 690px;
+    }
+
+    .insideThisRegister,
+    .insideThisLogin {
+        margin: 0;
+        padding: 20px;
+        border-radius: 12px;
+        width: 80%;
+    }
+
+    .thisULogin {
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+        margin: 4px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .register_UserMainWindow,
+    .login_UserMainWindow {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .insideThisRegister,
+    .insideThisLogin {
+        margin: 0;
+        padding: 10px;
+        border-radius: 12px;
+        width: 80%;
+    }
+
+    .thisULogin {
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+        margin: 2px;
+        padding: 8px;
+    }
+}

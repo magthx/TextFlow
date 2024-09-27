@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../styles/registerStyles.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/mediaQueriesRegister.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="vibin-default-view">
+        <h1>TextFlow</h1>
+    </div>
+    <div class="container">
+
+        <div class="register_UserMainWindow">
+            <div class="insideThisRegister">
+                <i class="fas fa-users" id="thisUsersRegisterLogo"></i>
+                <h3>Crea tu usuario!</h3>
+                <form method="post" id="thisRegisterForm" class="thisFormRegister">
+                    <input type="text" id="usuarioPublico" placeholder="Usuario" required maxlength="15"
+                        autocomplete="off">
+                    <input type="email" id="textoCorreo" placeholder="Ingresa tu correo" required maxlength="45"
+                        autocomplete="off">
+                    <input type="password" id="textoCifrado" placeholder="Tu clave" required maxlength="30"
+                        autocomplete="off">
+                    <button type="submit" id="submitButtonRegisterWindow">Crear <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                <div class="containerReglas">
+                    <ul class="thisULogin" id="thisULogin">
+                        <li>Reglas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="login_UserMainWindow">
+            <div class="insideThisLogin">
+                <i class="fas fa-sign-in-alt" id="thisUsersLoginLogo"></i>
+                <h3>Bienvenido!</h3>
+                <form method="post" id="thisLoginForm">
+                    <input type="email" id="textoCorreoLogin" placeholder="Ingresa tu correo" required maxlength="45"
+                        autocomplete="off">
+                    <input type="password" id="textoCifradoLogin" placeholder="Tu clave" required maxlength="30"
+                        autocomplete="off">
+                    <button type="submit" id="submitButtonLoginWindow">Login <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/myDataRegister.js" type="module" defer></script>
+
+</body>
+
+</html>

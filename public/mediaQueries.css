@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:1440px) {
+    main {
+        height: 70vh;
+    }
+
+    .user-interface-main-screen {
+        border-radius: 8px;
+        margin: 30px;
+        width: 20000px;
+        height: 100%;
+    }
+
+    .initial-logo-question i {
+        font-size: 26px;
+    }
+
+    .initial-logo-question i:hover {
+        opacity: 1;
+    }
+
+    .user-main-app-window {
+        font-size: 18px;
+        font-family: 'Outfit', sans-serif;
+        padding: 14px;
+        width: fit-content;
+    }
+
+    .user-main-app-window ul {
+        flex-direction: column;
+        list-style-type: none;
+        gap: 20px;
+    }
+
+    .user-main-app-window li {
+        padding: 10px;
+    }
+
+    .this-father-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .unique-user-form {
+        width: 20000px;
+        margin: 30px;
+    }
+
+    input[type=text]::placeholder {
+        font-size: 18px;
+    }
+
+    #user-main-app-window {
+        display: flex;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    main {
+        height: 70vh;
+    }
+
+    .user-interface-main-screen {
+        border-radius: 8px;
+        margin: 30px;
+        width: 16000px;
+        height: 100%;
+    }
+
+    .initial-logo-question i {
+        font-size: 20px;
+    }
+
+    .initial-logo-question i:hover {
+        opacity: 1;
+    }
+
+    .user-main-app-window {
+        font-size: 16px;
+        font-family: 'Outfit', sans-serif;
+        padding: 14px;
+        width: fit-content;
+    }
+
+    .user-main-app-window ul {
+        flex-direction: column;
+        list-style-type: none;
+        gap: 20px;
+    }
+
+    .user-main-app-window li {
+        padding: 10px;
+    }
+
+    .this-father-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .unique-user-form {
+        width: 1200px;
+        margin: 30px;
+    }
+
+    input[type=text]::placeholder {
+        font-size: 16px;
+    }
+
+    #user-main-app-window {
+        display: flex;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .user-interface-main-screen {
+        margin: 30px;
+        width: 1000px;
+        height: 80%;
+        max-height: 800px;
+    }
+
+    .unique-user-form {
+        width: 1000px;
+        margin: 30px;
+    }
+
+    input[type=text] {
+        width: 100%;
+    }
+
+    input[type=text]::placeholder {
+        font-size: 14px;
+    }
+
+    #user-main-app-window {
+        width: 100%;
+    }
+
+    .this--message-newDivMessage li {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .user-interface-main-screen {
+        width: 800px;
+        height: 80%;
+        max-height: 800px;
+    }
+
+    .unique-user-form {
+        width: 800px;
+        margin: 30px;
+    }
+
+    input[type=text] {
+        width: 100%;
+    }
+
+    input[type=text]::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .user-interface-main-screen {
+        width: 600px;
+        height: 80%;
+        max-height: 600px;
+    }
+
+    .unique-user-form {
+        width: 600px;
+        margin: 30px;
+    }
+
+    input[type=text] {
+        width: 100%;
+    }
+
+    input[type=text]::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .user-interface-main-screen {
+        width: 600px;
+        height: 80%;
+        height: 500px;
+        max-height: 500px;
+    }
+
+    .unique-user-form {
+        width: 600px;
+        margin: 20px;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+
+    main {
+        height: 70vh;
+    }
+
+    .user-interface-main-screen {
+        border-radius: 8px;
+        margin: 30px;
+        width: 1000px;
+        height: 100%;
+    }
+
+    .initial-logo-question i {
+        font-size: 18px;
+    }
+
+    .initial-logo-question i:hover {
+        opacity: 1;
+    }
+
+    .user-main-app-window {
+        font-size: 14px;
+        font-family: 'Outfit', sans-serif;
+        padding: 14px;
+        width: fit-content;
+    }
+
+    .user-main-app-window ul {
+        flex-direction: column;
+        list-style-type: none;
+        gap: 20px;
+    }
+
+    .user-main-app-window li {
+        padding: 10px;
+    }
+
+    .this-father-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .unique-user-form {
+        width: 1200px;
+        margin: 30px;
+    }
+
+    input[type=text]::placeholder {
+        font-size: 12px;
+    }
+
+    #user-main-app-window {
+        display: flex;
+        width: 90%;
+    }
+
+}
