@@ -66,7 +66,7 @@ thisRegisterForm.addEventListener('submit', async (event) => {
             timer: 3000,
             timerProgressBar: true,
             didClose: () => {
-                window.location.href = '../../public/';
+                window.location.href = '/TextFlow/index.html';
             }
         });
     } catch (error) {
@@ -134,7 +134,7 @@ thisLoginForm.addEventListener('submit', async (event) => {
                 timerProgressBar: true,
                 showConfirmButton: false,
                 didClose: () => {
-                    window.location.href = '../../public/';
+                    window.location.href = '/TextFlow/index.html';
                 }
             });
         } else {
@@ -189,7 +189,7 @@ const thisULogin = document.getElementById('thisULogin');
 // FUNCIONES PRINCIPALES
 thisULogin.addEventListener('click', () => {
     Swal.fire({
-        imageUrl: '../assets/images/secondPolice_OfficerPixel_Art.gif',
+        imageUrl: '../assets/secondPolice_OfficerPixel_Art.gif',
         html: `
         <ul style='list-style:none;'>
             <li>Evita el spam :)</li> 
@@ -206,7 +206,7 @@ thisULogin.addEventListener('click', () => {
 // FUNCION CARGA DE PAGINA
 window.onload = function () {
     Swal.fire({
-        imageUrl: '../assets/images/firstScript_TablePixelArt.gif',
+        imageUrl: '../assets/firstScript_TablePixelArt.gif',
         html: `<li style='list-style:none;'>Por favor lee las reglas :)</li>`,
         timer: 5000,
         timerProgressBar: true,

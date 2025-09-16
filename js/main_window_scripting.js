@@ -35,7 +35,7 @@ onAuthStateChanged(auth, async (user) => { // Marcamos la función como `async`
                     icon: 'error',
                     html: `Documento del usuario no encontrado. Serás redirigido`,
                     didClose: () => {
-                        window.location.href = '../src/pages/register_on.html';
+                        window.location.href = '/TextFlow/register/';
                     }
                 });
             }
@@ -44,7 +44,7 @@ onAuthStateChanged(auth, async (user) => { // Marcamos la función como `async`
                 icon: 'error',
                 html: `${error}`,
                 didClose: () => {
-                    window.location.href = '../src/pages/register_on.html';
+                    window.location.href = '/TextFlow/register/';
                 }
             });
         }
@@ -53,7 +53,7 @@ onAuthStateChanged(auth, async (user) => { // Marcamos la función como `async`
             icon: 'error',
             html: `No tienes una cuenta, porfavor crea una.`,
             didClose: () => {
-                window.location.href = '../src/pages/register_on.html';
+                window.location.href = '/TextFlow/register/';
             }
         });
     }
@@ -133,7 +133,7 @@ send_user_form.addEventListener('click', (event) => {
                             icon: 'error',
                             html: `Documento del usuario no encontrado. Serás redirigido`,
                             didClose: () => {
-                                window.location.href = '../src/pages/register_on.html';
+                                window.location.href = '/TextFlow/register/';
                             }
                         });
                     }
@@ -142,7 +142,7 @@ send_user_form.addEventListener('click', (event) => {
                         icon: 'error',
                         html: `${error}`,
                         didClose: () => {
-                            window.location.href = '../src/pages/register_on.html';
+                            window.location.href = '/TextFlow/register/';
                         }
                     });
                 }
@@ -151,7 +151,7 @@ send_user_form.addEventListener('click', (event) => {
                     icon: 'error',
                     html: `No tienes una cuenta, porfavor crea una.`,
                     didClose: () => {
-                        window.location.href = '../src/pages/register_on.html';
+                        window.location.href = '/TextFlow/register/';
                     }
                 });
             }
