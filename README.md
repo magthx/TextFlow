@@ -1,1 +1,2 @@
-a simple real-time web chat with some personalizations!
+A simple real-time web chat with some personalizations!
+Access here: https://magthx.github.io/TextFlow/register/
